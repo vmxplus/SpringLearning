@@ -10,6 +10,7 @@ import org.springframework.core.io.Resource;
 public class Main {
 	public static void main(String[] args) {
 		Resource r = new FileSystemResource("helloMessage.xml");
+		@SuppressWarnings("deprecation")
 		BeanFactory f = new XmlBeanFactory(r);
 		Person person  = (Person) f.getBean("person");
 		String s = person.sayHello();
